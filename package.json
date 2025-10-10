@@ -1,21 +1,21 @@
 {
-  "name": "MyWebsite",
+  "name": "my-website",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://silvaxxx1.github.io/MyWebsite",
+  "homepage": "https://haisamabbas.github.io/MyWebsite",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "build:prod": "NODE_ENV=production tsc -b && vite build",
+    "build:prod": "set NODE_ENV=production && tsc -b && vite build",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
+    "predeploy": "npm run build:prod",
+    "deploy": "gh-pages -d dist",
     "preview": "vite preview",
     "test": "vitest",
     "test:run": "vitest run",
-    "test:coverage": "vitest run --coverage",
-    "predeploy": "npm run build:prod",
-    "deploy": "npm run build:prod && gh-pages -d dist"
+    "test:coverage": "vitest run --coverage"
   },
   "dependencies": {
     "@babel/generator": "^7.28.3",
