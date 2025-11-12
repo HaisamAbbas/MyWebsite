@@ -6,8 +6,8 @@
   "homepage": "https://haisamabbas.github.io/MyWebsite",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
-    "build:prod": "set NODE_ENV=production && tsc -b && vite build",
+    "build": "tsc && vite build --base=/MyWebsite/",
+    "build:prod": "set NODE_ENV=production && tsc && vite build --base=/MyWebsite/",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "predeploy": "npm run build:prod",

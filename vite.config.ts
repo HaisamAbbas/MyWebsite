@@ -6,7 +6,7 @@ import { resolve } from 'path'
 export default defineConfig({
   plugins: [react()],
   // Important: base must match your GitHub repo name
-  base: '/MyWebsite/',
+  base: process.env.NODE_ENV === 'production' ? '/MyWebsite/' : '/',
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
