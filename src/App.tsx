@@ -103,7 +103,7 @@ const App: React.FC = () => {
   const navigationValue: NavigationContextType = { activeSection, setActiveSection, scrollToSection };
 
   return (
-    <BrowserRouter basename={import.meta.env.BASE_URL}>
+    <BrowserRouter basename={import.meta.env.BASE_URL || '/'}>
       <ThemeContext.Provider value={themeValue}>
         <NavigationContext.Provider value={navigationValue}>
           <div className={`app ${isDarkMode ? 'dark' : 'light'}`}>

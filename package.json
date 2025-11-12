@@ -8,6 +8,7 @@
     "dev": "vite",
     "build": "tsc && vite build --base=/MyWebsite/",
     "build:prod": "set NODE_ENV=production && tsc && vite build --base=/MyWebsite/",
+    "build:vercel": "tsc && vite build",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "predeploy": "npm run build:prod",

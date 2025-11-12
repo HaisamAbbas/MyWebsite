@@ -5,8 +5,8 @@ import { resolve } from 'path'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  // Important: base must match your GitHub repo name
-  base: process.env.NODE_ENV === 'production' ? '/MyWebsite/' : '/',
+  // Dynamic base path - empty for Vercel, /MyWebsite/ for GitHub Pages
+  base: process.env.VERCEL ? '/' : (process.env.NODE_ENV === 'production' ? '/MyWebsite/' : '/'),
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
