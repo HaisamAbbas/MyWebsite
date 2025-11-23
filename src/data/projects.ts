@@ -3,27 +3,44 @@ import type { Project } from '../types';
 export const projects: Project[] = [
   {
     id: '1',
-    title: 'MyLLM: Complete LLM Pipeline',
-    description: 'End-to-end LLM development: training, fine-tuning, RLHF, and quantization.',
+    title: 'AWS Support Agent',
+    description: 'Full-stack AI support agent with FastAPI backend (LangChain + GROQ), Vue 3 frontend, real-time streaming, and vector-based knowledge retrieval.',
     longDescription: `
-MyLLM101 is an end-to-end, modular framework for exploring, learning, and experimenting with large language models (LLMs).  
-Designed for learners, researchers, and engineers alike, it provides deep insights into every stage of the LLM lifecycle without relying on black-box frameworks.  
+A production-ready, full-stack AWS Support Agent featuring modern web technologies, intelligent conversation handling, and real-time streaming capabilities. This enterprise-grade application combines a FastAPI backend with LangChain orchestration and a beautiful Vue 3 frontend, demonstrating professional full-stack development practices.
 
-**Core Innovations & Highlights:**  
-- Single-file transformer decoder definitions supporting multiple variations (GPT-2, LLaMA, and custom designs).  
-- LEGO-style architecture configuration enabling rapid experimentation with custom model designs, attention mechanisms, and optimization strategies.  
-- End-to-end interactive notebooks documenting my journey from scratch to fully operational LLM systems, providing a comprehensive educational resource.  
-- Focused on demystifying LLM internals: tokenization, training loops, RLHF, quantization, and memory optimization.  
+**Core Features & Architecture:**  
+- **Intelligent Agent System**: Powered by GROQ LLM (Llama-3.1-8b-instant) with LangChain orchestration for context-aware AWS support queries.  
+- **Vector-Based Knowledge Retrieval**: FAISS-powered vector search enabling accurate information retrieval from AWS documentation and knowledge bases.  
+- **Real-Time Streaming**: WebSocket integration using Socket.IO for live response streaming, providing immediate user feedback during long-running queries.  
+- **Secure Authentication**: API key-based authentication system with Bearer token protection for all agent operations and session management.  
+- **Modern Frontend**: Vue 3 with Vite, Tailwind CSS, featuring responsive design, chat history persistence (localStorage), and toggle-able streaming modes.  
+- **Production-Ready Backend**: FastAPI with auto-generated Swagger/ReDoc documentation, CORS configuration, and RESTful API design patterns.
 
-**Impact & Education:** 
- 
-- Empowers engineers and learners to understand and build LLMs from the ground up.  
-- Serves as a blueprint for creating fully customized, production-ready models in a controlled and transparent manner.  
-- Bridges the gap between theoretical concepts and hands-on application, enabling the AI community to reduce reliance on black-box APIs.
+**Technical Stack & Implementation:**  
+- **Backend**: FastAPI, LangChain, GROQ API, FAISS vector store, Python Socket.IO, Pydantic validation  
+- **Frontend**: Vue 3 Composition API, Vite build tooling, Tailwind CSS, Axios HTTP client, Socket.IO client  
+- **Pipeline Architecture**: Modular step-based processing with materializers for data persistence and transformation  
+- **Developer Experience**: Automated setup scripts (PowerShell), comprehensive documentation, Docker-ready configuration
+
+**Enterprise Features & Best Practices:**  
+- Protected API endpoints with authentication middleware and session validation  
+- Automatic chat history persistence with localStorage integration  
+- Toggle-able streaming vs. synchronous modes for different use cases  
+- Source citation system showing documentation references  
+- Comprehensive error handling and troubleshooting documentation  
+- Clean component architecture with separation of concerns  
+- Full testing suite and example client implementations
+
+**Real-World Application Value:**  
+- Demonstrates professional full-stack development with modern frameworks  
+- Implements production-grade authentication and security patterns  
+- Shows real-time communication patterns with WebSocket streaming  
+- Provides reusable architecture for building AI-powered customer support systems  
+- Ready for deployment on cloud platforms (Docker, Vercel, Netlify)
 `,
-    technologies: ['Python', 'PyTorch', 'Transformers', 'CUDA', 'RLHF', 'Quantization'],
-    imageUrl: `${import.meta.env.BASE_URL}images/projects/myllm.png`,
-    githubUrl: 'https://github.com/silvaxxx1/MyLLM101',
+    technologies: ['Python', 'FastAPI', 'LangChain', 'GROQ', 'FAISS', 'Vue 3', 'Vite', 'Tailwind CSS', 'Socket.IO', 'Docker'],
+    imageUrl: `${import.meta.env.BASE_URL}images/projects/AWS2.jpg`,
+    githubUrl: 'https://github.com/HaisamAbbas/AWS-Support-Agent',
     featured: true,
     category: 'project'
   },
@@ -145,7 +162,7 @@ HandsOnLLM is a modular, end-to-end project suite for practical experimentation 
   },
   {
     id: '6',
-    title: 'Automated TF2 Object Detection Pipeline',
+    title: 'Vision Transformer from Scratch',
     description: 'Automated inference and fine-tuning pipeline using TensorFlow 2 Object Detection API.',
     longDescription: `
 This project delivers a fully automated pipeline for object detection using TensorFlow 2 (TF2) Object Detection API, designed to simplify both inference and fine-tuning.  
@@ -175,4 +192,5 @@ This project delivers a fully automated pipeline for object detection using Tens
     featured: false,
     category: 'project'
   }
+  
 ];
